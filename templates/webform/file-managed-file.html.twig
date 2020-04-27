@@ -1,0 +1,27 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a file form widget.
+ *
+ * Available variables:
+ * - element: Form element for the file upload.
+ * - attributes: HTML attributes for the containing element.
+ *
+ * @see template_preprocess_file_managed_file()
+ *
+ * @ingroup themeable
+ */
+#}
+{%
+  set classes = [
+    'js-form-managed-file',
+    'form-managed-file',
+  ]
+%}
+<div{{ attributes.addClass(classes) }}>
+  {{ element }}
+ 
+</div>
+<div id="file_load_bar" style="width:100%;height:60px;margin: 10px 0px 33px 0px;" class="ldBar" data-stroke="data:ldbar/res,gradient(0,1,#9df,#9fd,#df9,#fd9)",
+  data-path="M10 20Q20 15 30 20Q40 25 50 20Q60 15 70 20Q80 25 90 20"></div>
+

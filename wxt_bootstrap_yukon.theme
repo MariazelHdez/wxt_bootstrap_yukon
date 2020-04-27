@@ -1,0 +1,57 @@
+<?php
+
+/**
+ * @file
+ * WxT Bootstrap sub-theme.
+ *
+ * Place your custom PHP code in this file.
+ */
+
+/**
+ * Prepares variables for webform 'wizard' progress template.
+ *
+ * Default template: webform-progress.html.twig.
+ *
+ * @param array $variables
+ *   An associative array containing the following key:
+ *   - webform: A webform.
+ *   - current_page: The current wizard page.
+ */
+function wxt_bootstrap_yukon_preprocess_webform_progress(array &$variables) {
+  /** @var \Drupal\webform\WebformLibrariesManagerInterface $libraries_manager */
+  $libraries_manager = \Drupal::service('webform.libraries_manager');
+
+  /** @var \Drupal\webform\WebformInterface $webform */
+  $webform = $variables['webform'];
+  $webform_submission = $variables['webform_submission'];
+  $current_page = $variables['current_page'];
+  $operation = $variables['operation'];
+
+  $pages = $webform->getPages($operation, $webform_submission);
+
+  $page_keys = array_keys($pages);
+  $page_indexes = array_flip($page_keys);
+  $current_index = $page_indexes[$current_page];
+
+  $total = count($page_keys);
+
+  if ($webform->getSetting('wizard_progress_bar')) {
+    $variables['bar'] = [
+      '#theme' => ($libraries_manager->isIncluded('progress-tracker')) ? 'webform_progress_tracker' : 'webform_progress_bar',
+      '#webform' => $webform,
+      '#webform_submission' => $webform_submission,
+      '#current_page' => $current_page,
+      '#operation' => $operation,
+    ];
+  }
+
+  if ($webform->getSetting('wizard_progress_pages') && $current_index !== 0 ) {
+    $variables['summary'] = t('Step @start of @end', ['@start' => $current_index, '@end' => $total -1]);
+  }else{
+    $variables['summary'] = "";
+  }
+
+  if ($webform->getSetting('wizard_progress_percentage')) {
+    $variables['percentage'] = number_format(($current_index / ($total - 1)) * 100, 0) . '%';
+  }
+}
