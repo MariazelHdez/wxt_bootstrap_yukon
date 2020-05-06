@@ -1,12 +1,9 @@
 {% set container = theme.settings.fluid_container ? 'container-fluid' : 'container' %}
 
 {# Navbar #}
-{% if page.navigation or page.navigation_collapsible %}
-  {% block navbar %}
-    {%
-      set navbar_classes = []
-    %}
-
+{%
+  set navbar_classes = []
+%}
   <header{{ navbar_attributes.addClass(navbar_classes) }} id="navbar" role="banner">
     <div id="wb-bnr">
       <div class="container">
@@ -14,38 +11,10 @@
           <div class="site-main-logo col-xs-6">
             {{ drupal_entity('block', 'wxt_bootstrap_yukon_branding') }}
           </div>
-          <div class="site-nav-toggle col-xs-6">
-            <div class="row">
-              <div class="pull-right">
-                <section id="wb-lng" class="header-lang-toggle">
-                  {{ drupal_entity('block', 'languageswitcher')}}
-                </section>                
-              </div>
-            </div>
-          </div>
-
-          <nav id="global-nav" aria-label="Main navigation" role="navigation">
-            <header>
-              <button href="javascript:void(0)" class="closebtn">{{ 'Close'|t }}
-                <svg viewBox="0 0 40 40">
-                  <path class="close-x" d="M 10,10 L 30,30 M 30,10 L 10,30"></path>
-                </svg>
-              </button>
-              <h3 class="gov-serv-h3">{{ 'Government services <br />and information'|t }}</h3>
-            </header>
-            <h2 class="visuallyhidden">{{ 'Topics menu'|t }}</h2>
-            {{ drupal_entity('block', 'topics_2') }}
-          </nav>
-          <span class="global-nav_overlay" role="button" tabindex="0" id="a11y-toggle-2">
-            <span class="visually-hidden">{{ 'Government services <br />and information'|t }}</span>
-          </span>
         </div>
       </div>
     </div>
   </header>
-
-  {% endblock %}
-{% endif %}
 
   <div class="aurora-town">
     <span class="aurora--main"></span>
@@ -108,11 +77,9 @@
           {{ page.content }}
           <span class="aurora--mini"></span>
           {{ page.content_footer }}
-          
           {% if page.page_form %}
             {{ page.page_form }}
-          {% endif %}   
-          
+          {% endif %}
         {% endblock %}
       </div>
     </div>
@@ -153,8 +120,6 @@
   {% endif %}
 {% endblock %}
 
-{% if page.footer %}
-  {% block footer %}
 <footer role="contentinfo" id="wb-info">
   <div class="container">
     <div class="row">
@@ -175,7 +140,6 @@
       </div>
     </div>
   </div>
-    {% if page.footer %}
       <div class="footer-menu-wrapper">
         <div class="container">
           <nav class="footer-menu navbar-left" role="navigation">
@@ -186,7 +150,6 @@
           </div>
         </div>
       </div>
-    {% endif %}
 </footer>
-  {% endblock %}
-{% endif %}
+
+
