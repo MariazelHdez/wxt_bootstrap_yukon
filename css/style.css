@@ -890,7 +890,7 @@ footer[role=contentinfo] .social i{
     position:absolute;
     right:-40%;
     top:0;
-    background-image:url(../../images/Aurora-small-mobile.svg);
+    background-image:url(../images/Aurora-small-mobile.svg);
     background-size:100%;
     background-repeat:no-repeat;
     height:200px;
@@ -902,7 +902,7 @@ footer[role=contentinfo] .social i{
         padding-bottom:20px
     }
     .brand:after{
-        background-image:url(../../images/Aurora-main.svg);
+        background-image:url(../images/Aurora-main.svg);
         top:-30px;
         width:70%;
         right:-20%
@@ -963,7 +963,7 @@ body .aurora--main:before{
     content:'';
     -webkit-transition:all .4s ease;
     transition:all .4s ease;
-    background-image:url(../../images/Aurora-small-mobile.svg);
+    background-image:url(../images/Aurora-small-mobile.svg);
     background-repeat:no-repeat
 }
 @media (min-width:767px){
@@ -975,7 +975,7 @@ body .aurora--main:before{
         height:185px;
         -webkit-transition:all .4s ease;
         transition:all .4s ease;
-        background-image:url(../../images/Aurora-main.svg);
+        background-image:url(../images/Aurora-main.svg);
         background-size:contain
     }
     .primary-items h2,.secondary-items h2,.tertiary-items h2{
@@ -995,7 +995,7 @@ body .aurora--mini:before{
     height:45px;
     margin:0 auto;
     content:'';
-    background-image:url(../../images/Aurora-mini.svg);
+    background-image:url(../images/Aurora-mini.svg);
     background-repeat:no-repeat
 }
 .front-svg{
@@ -1553,7 +1553,7 @@ body .aurora--mini:before{
     padding-left:45px
 }
 .node-news .field--name-field-news-quote .paragraphs-item-quotes:before{
-    content:url(../../images/quotes.svg);
+    content:url(../images/quotes.svg);
     display:block;
     position:absolute;
     top:0;
@@ -2010,7 +2010,7 @@ label{
     width:350px;
     height:135px;
     content:'';
-    background-image:url(../../images/Aurora-small-mobile.svg);
+    background-image:url(../images/Aurora-small-mobile.svg);
     background-repeat:no-repeat;
     background-size:contain
 }
@@ -2034,7 +2034,7 @@ label{
         right:-300px;
         bottom:0;
         width:66%;
-        background-image:url(../../images/Aurora-main.svg);
+        background-image:url(../images/Aurora-main.svg);
         background-size:cover
     }
     .landing-page-banner .landing-page-banner-inner{
@@ -4155,7 +4155,7 @@ header.campaign-header+main+footer{
     height:100%;
     content:'';
     color:rgba(0,129,143,.2);
-    background-image:url(../../images/blockquote-bg.svg);
+    background-image:url(../images/blockquote-bg.svg);
     background-repeat:no-repeat;
     background-size:120px auto
 }

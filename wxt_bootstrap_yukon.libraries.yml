@@ -1,7 +1,7 @@
 global-styling:
   css:
     theme:
-      css/webform_tiip.css: {}    
+      css/webform_tipp.css: {}    
       css/style.css: {}
       css/style_yukon.css: {}
       css/slick-theme.css: {}

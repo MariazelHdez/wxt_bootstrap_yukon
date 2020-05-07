@@ -1,7 +1,7 @@
 .webform-submission-form .control-label{
   display: block;
 }
-.tiip-img{
+.tipp-img{
   height: 300px;
 }
 .mandatory-field{
@@ -9,7 +9,7 @@
   font-weight: 800;
   font-size: 20px;
 }
-.tiip-title{
+.tipp-title{
   margin-bottom: 30px;
 }
 .webform-submission-form .row .col-md-8{
@@ -34,6 +34,7 @@ div.form-actions.webform-actions, #edit-actions, #edit-actions-01{
 } 
 .webform-submission-form .form-item > div{
   margin-bottom: 5px;
+  display: inline;
 }
 
 .form-item {
